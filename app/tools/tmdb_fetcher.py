@@ -44,7 +44,6 @@ def search_shows(query: str, include_adult: bool = False, language: str = "en-US
     try:
         response = requests.get(url, params=params, timeout=10)
         response.raise_for_status()
-        print(response.json())
         return response.json().get("results", [])
     except requests.RequestException as e:
         print(f"[TMDb] TV show search failed: {e}")
