@@ -1,6 +1,6 @@
 import requests
 
-ROMA_API_URL = "http://localhost:5000/api/simple/execute"
+ROMA_API_URL = "http://138.124.108.227:5000/api/simple/execute"
 
 def query_roma(user_req: str):
     """Send user request to ROMA and collect response to query movie db"""
@@ -12,7 +12,7 @@ def query_roma(user_req: str):
             You are an expert movie and TV show recommender system.
             Given a user query, recommend a list of movies or TV shows that best fit the user's needs.
             Use your knowledge of movies and TV shows to provide accurate recommendations. 
-            Give detailed reason why you are recommending this movie or show.
+            Give detailed reason why you are recommending this movie or show, highlighting the similarities in an obvious tone.
             Give your recommendations as a valid JSON array, with each object containing:
             - title
             - reason
